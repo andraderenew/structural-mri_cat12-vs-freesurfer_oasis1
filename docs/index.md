@@ -1,45 +1,46 @@
-# <Project Title>: <Modality & Tools> on <Dataset>
+# Structural MRI: CAT12 vs FreeSurfer (OASIS-1)
 
-### What this project asks (2–3 lines)
-A crisp statement of the scientific question and why it matters.
+**Goal (1–2 lines):** Do CAT12 and FreeSurfer produce comparable morphometry (e.g., cortical thickness/volumes) on a small OASIS-1 subset?
+
+---
+
+## Snapshot
+- **Dataset:** OASIS-1 (T1 MRI) — small subject subset
+- **Local subset:** <N subjects>  · **Disk:** keep ≤ ~2–5 GB (start with 1–2 subjects)
+- **Tools:** SPM12 + CAT12, FreeSurfer
+- **Status:** <planned / in progress / complete>
+- **Last updated:** <YYYY-MM-DD>
 
 ---
 
 ## Data
-- **Source:** <dataset name + link> · **License/DUA:** <text>
-- **Subset used:** <n subjects/sessions> · **Approx disk:** <X GB> (raw) / <Y GB> (derivatives)
-- **Layout:** BIDS (if applicable)
-
-> We **do not** commit raw data to the repository. If needed, link to the public source and keep large artifacts out of git. (GitHub looks for an entry file in `/docs` such as `index.md` when you publish Pages from that folder.)
+- **Source & license:** Link to OASIS-1 page and note license/DUA.
+- **What I downloaded:** list subject IDs; explain why this subset.
+- **Layout:** BIDS if available; otherwise keep a simple folder structure.
 
 ---
 
 ## Pipeline (high-level)
-Preprocessing → Analysis → Statistics → QC  
-Tools: FreeSurfer / FSL / SPM + CAT12 / Brainstorm / EEGLAB / FieldTrip / BRAPH / MATLAB
-
-Confounds handled (examples): motion, age/sex, site.
+1) CAT12 segmentation / surface processing  
+2) FreeSurfer `recon-all`  
+3) ROI extraction (Desikan/Destrieux) and CAT12 ROI table  
+4) Compare CAT12 vs FreeSurfer (scatter/ICC)  
+5) QC: CAT12 report + FS logs/screenshots
 
 ---
 
-## Results
-- 2–3 key figures (see `results/figures/`)
-- Report thresholds (e.g., FWE/FDR; cluster-permutation for M/EEG) and effect sizes.
+## Results (to be filled)
+- Figure 1: CAT12 vs FS thickness (ROI scatter)  
+- Table 1: ROI differences / ICC  
+- Notes: potential biases (e.g., smoothing, skull-strip differences)
 
 ---
 
 ## Reproducibility
-- **Versions:** see `env/TOOL_VERSIONS.md`
-- **Steps to re-run:** bullet list of actions (no raw data)
-- **Known limits:** sample size, heterogeneity, compute
+- Versions in `env/TOOL_VERSIONS.md`.  
+- Steps to rerun (short): “Install SPM/CAT12 & FreeSurfer → place T1s → run CAT12 → run FS → export ROIs → compare.”
+- Limitations: tiny N, scanner/site heterogeneity.
 
 ---
 
-## Cite this work
-A `CITATION.cff` is included—GitHub renders a “Cite this repository” box automatically.  
-When you cut a Release and connect to Zenodo, add the DOI badge here.
-
----
-
-### Author & links
-**Rene Andrade Rey** · 🧪 ORCID: https://orcid.org/0000-0001-5627-579X · 🌐 Google Scholar: https://scholar.google.es/citations?hl=es&user=Nl3ApFEAAAAJ
+**Author:** Rene Andrade Rey · 🧪 ORCID: https://orcid.org/0000-0001-5627-579X · 🌐 Scholar: https://scholar.google.es/citations?hl=es&user=Nl3ApFEAAAAJ

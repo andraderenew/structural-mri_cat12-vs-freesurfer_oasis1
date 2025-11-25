@@ -10,3 +10,5 @@ abstract: "Morphometry agreement between CAT12 and FreeSurfer on a tiny OASIS-1 
 license: "MIT"
 repository-code: "https://github.com/andraderenew/structural-mri_cat12-vs-freesurfer_oasis1"
 url: "https://scholar.google.es/citations?hl=es&user=Nl3ApFEAAAAJ"
+
+doi: "10.5281/zenodo.17715121"

@@ -1,6 +1,6 @@
 # Structural MRI — CAT12 vs FreeSurfer (OASIS-1)
 [![License](https://img.shields.io/github/license/andraderenew/structural-mri_cat12-vs-freesurfer_oasis1)](LICENSE)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.XXXXXXX-blue)](#cite-this-work)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17715121-blue)](https://doi.org/10.5281/zenodo.17715121)
 [![Pages](https://img.shields.io/website?url=https%3A%2F%2Fandraderenew.github.io%2Fstructural-mri_cat12-vs-freesurfer_oasis1%2F)](https://andraderenew.github.io/structural-mri_cat12-vs-freesurfer_oasis1/)
 ![Release](https://img.shields.io/github/v/release/andraderenew/structural-mri_cat12-vs-freesurfer_oasis1?include_prereleases)
 ![Last commit](https://img.shields.io/github/last-commit/andraderenew/structural-mri_cat12-vs-freesurfer_oasis1)

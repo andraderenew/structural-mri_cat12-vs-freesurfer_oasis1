@@ -7,9 +7,12 @@
     }
   ],
   "title": "Structural MRI — CAT12 versus FreeSurfer on OASIS-1",
-  "description": "Portfolio scaffold for comparing CAT12 and FreeSurfer morphometry on a small OASIS-1 subset, including quality control, regional measurements, scatter plots, agreement statistics, and Bland–Altman analysis. The repository currently describes a planned comparison and does not claim completed results.",
+  "description": "Portfolio scaffold for comparing CAT12 and FreeSurfer morphometry on a small OASIS-1 subset, including quality control, regional measurements, scatter plots, agreement statistics, and Bland–Altman analysis. The repository describes a planned comparison and does not claim completed results.",
   "version": "0.1.1",
+  "upload_type": "software",
   "access_right": "open",
+  "license": "mit",
+  "language": "eng",
   "keywords": [
     "structural MRI",
     "CAT12",
@@ -19,10 +22,7 @@
     "agreement analysis",
     "neuroimaging"
   ],
-  "license": "mit",
-  "upload_type": "software",
-  "language": "eng",
-  "notes": "Portfolio scaffold. The archived repository documents a planned workflow and does not claim completed scientific results.",
+  "notes": "Portfolio scaffold. The archived repository documents a planned comparison and does not claim completed scientific results.",
   "related_identifiers": [
     {
       "identifier": "https://github.com/andraderenew/structural-mri_cat12-vs-freesurfer_oasis1",

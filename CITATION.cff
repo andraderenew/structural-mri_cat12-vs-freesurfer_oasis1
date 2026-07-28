@@ -1,14 +1,22 @@
 cff-version: 1.2.0
-title: "Structural MRI — CAT12 vs FreeSurfer (OASIS-1)"
+title: "Structural MRI — CAT12 versus FreeSurfer on OASIS-1"
 message: "If you use this project, please cite it as below."
 type: software
 authors:
   - family-names: "Andrade Rey"
     given-names: "Rene"
     orcid: "https://orcid.org/0000-0001-5627-579X"
-abstract: "Morphometry agreement between CAT12 and FreeSurfer on a tiny OASIS-1 subset; QC and ROI comparisons."
+abstract: "Portfolio scaffold for comparing CAT12 and FreeSurfer morphometry on a small OASIS-1 subset, including quality control, regional measurements, scatter plots, agreement statistics, and Bland–Altman analysis. The repository currently describes a planned comparison and does not claim completed results."
 license: "MIT"
 repository-code: "https://github.com/andraderenew/structural-mri_cat12-vs-freesurfer_oasis1"
-url: "https://scholar.google.es/citations?hl=es&user=Nl3ApFEAAAAJ"
-
-doi: "10.5281/zenodo.17715121"
+url: "https://github.com/andraderenew/structural-mri_cat12-vs-freesurfer_oasis1"
+version: "0.1.1"
+date-released: "2026-07-28"
+keywords:
+  - "structural MRI"
+  - "CAT12"
+  - "FreeSurfer"
+  - "OASIS-1"
+  - "morphometry"
+  - "agreement analysis"
+  - "neuroimaging"

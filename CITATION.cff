@@ -12,6 +12,7 @@ repository-code: "https://github.com/andraderenew/structural-mri_cat12-vs-freesu
 url: "https://github.com/andraderenew/structural-mri_cat12-vs-freesurfer_oasis1"
 version: "0.1.1"
 date-released: "2026-07-28"
+doi: "10.5281/zenodo.21650518"
 keywords:
   - "structural MRI"
   - "CAT12"

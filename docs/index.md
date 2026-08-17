@@ -1,46 +1,48 @@
-# Structural MRI: CAT12 vs FreeSurfer (OASIS-1)
+# Structural MRI: CAT26 vs FreeSurfer on OpenNeuro ds000114
 
-**Goal (1–2 lines):** Do CAT12 and FreeSurfer produce comparable morphometry (e.g., cortical thickness/volumes) on a small OASIS-1 subset?
+## Goal
 
----
+Compare structural MRI outputs from CAT26/SPM25 and FreeSurfer for the same public T1-weighted image while keeping method-specific definitions and limitations explicit.
 
 ## Snapshot
-- **Dataset:** OASIS-1 (T1 MRI) — small subject subset
-- **Local subset:** <N subjects>  · **Disk:** keep ≤ ~2–5 GB (start with 1–2 subjects)
-- **Tools:** SPM12 + CAT12, FreeSurfer
-- **Status:** <planned / in progress / complete>
-- **Last updated:** <YYYY-MM-DD>
 
----
+- Dataset: OpenNeuro `ds000114`
+- Participant: `sub-01`
+- Session: `ses-test`
+- Input: `sub-01_ses-test_T1w.nii`
+- CAT pipeline: SPM25 `25.01.02` + CAT26 `26.0.rc3` (build 3250)
+- FreeSurfer pipeline: FreeSurfer 7.4.1
+- Status: source pipelines completed and audited; cross-method comparison repository being aligned to those validated outputs
 
 ## Data
-- **Source & license:** Link to OASIS-1 page and note license/DUA.
-- **What I downloaded:** list subject IDs; explain why this subset.
-- **Layout:** BIDS if available; otherwise keep a simple folder structure.
 
----
+Both source projects processed the same OpenNeuro structural MRI. Raw data are excluded from GitHub.
 
-## Pipeline (high-level)
-1) CAT12 segmentation / surface processing  
-2) FreeSurfer `recon-all`  
-3) ROI extraction (Desikan/Destrieux) and CAT12 ROI table  
-4) Compare CAT12 vs FreeSurfer (scatter/ICC)  
-5) QC: CAT12 report + FS logs/screenshots
+Validated source repositories:
 
----
+- `andraderenew/structural-mri_cat12_single_subject`
+- `andraderenew/structural-mri_freesurfer_single_subject`
 
-## Results (to be filled)
-- Figure 1: CAT12 vs FS thickness (ROI scatter)  
-- Table 1: ROI differences / ICC  
-- Notes: potential biases (e.g., smoothing, skull-strip differences)
+The CAT source repository retains a historical name, but its completed processing used CAT26 and SPM25.
 
----
+## Available source outputs
+
+CAT26/SPM25 provides global tissue volumes and image-quality metrics. FreeSurfer provides global and subcortical volumes plus Desikan-Killiany cortical thickness, surface area, and cortical volume tables. Both projects include reviewed QC figures.
+
+## Comparison principles
+
+1. Compare only measures with defensible semantic correspondence.
+2. Do not treat similarly named CAT26 and FreeSurfer outputs as interchangeable by default.
+3. Keep single-subject comparisons descriptive.
+4. Do not report ICC or population-level agreement statistics from one participant.
+5. A regional cross-method analysis requires explicitly harmonized regional outputs from both pipelines.
 
 ## Reproducibility
-- Versions in `env/TOOL_VERSIONS.md`.  
-- Steps to rerun (short): “Install SPM/CAT12 & FreeSurfer → place T1s → run CAT12 → run FS → export ROIs → compare.”
-- Limitations: tiny N, scanner/site heterogeneity.
 
----
+Processing provenance is retained in the two source repositories. This repository documents the common input, cross-method scope, and any comparison outputs produced from those validated source results.
 
-**Author:** Rene Andrade Rey · 🧪 ORCID: https://orcid.org/0000-0001-5627-579X · 🌐 Scholar: https://scholar.google.es/citations?hl=es&user=Nl3ApFEAAAAJ
+## Limitations
+
+This is a single-subject technical comparison. Differences between software packages can reflect distinct segmentation models, cortical reconstruction procedures, atlas definitions, quality-control procedures, and measurement conventions.
+
+**Author:** Rene Andrade Rey · ORCID: https://orcid.org/0000-0001-5627-579X

@@ -1,32 +1,62 @@
-# Structural MRI — CAT12 vs FreeSurfer (OASIS-1)
-[![License](https://img.shields.io/github/license/andraderenew/structural-mri_cat12-vs-freesurfer_oasis1)](LICENSE)
+# Structural MRI — CAT26 vs FreeSurfer (OpenNeuro ds000114)
+
+[![License](https://img.shields.io/github/license/andraderenew/structural-mri_cat26-vs-freesurfer_openneuro-ds000114)](LICENSE)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17715121-blue)](https://doi.org/10.5281/zenodo.17715121)
-[![Pages](https://img.shields.io/website?url=https%3A%2F%2Fandraderenew.github.io%2Fstructural-mri_cat12-vs-freesurfer_oasis1%2F)](https://andraderenew.github.io/structural-mri_cat12-vs-freesurfer_oasis1/)
-![Release](https://img.shields.io/github/v/release/andraderenew/structural-mri_cat12-vs-freesurfer_oasis1?include_prereleases)
-![Last commit](https://img.shields.io/github/last-commit/andraderenew/structural-mri_cat12-vs-freesurfer_oasis1)
+![Release](https://img.shields.io/github/v/release/andraderenew/structural-mri_cat26-vs-freesurfer_openneuro-ds000114?include_prereleases)
+![Last commit](https://img.shields.io/github/last-commit/andraderenew/structural-mri_cat26-vs-freesurfer_openneuro-ds000114)
 [![ORCID](https://img.shields.io/badge/ORCID-0000--0001--5627--579X-A6CE39)](https://orcid.org/0000-0001-5627-579X)
-[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-4285F4)](https://scholar.google.es/citations?hl=es&user=Nl3ApFEAAAAJ)
 
-**One-line:** Morphometry agreement between CAT12 and FreeSurfer on a tiny OASIS-1 subset with QC and ROI summaries.
+Cross-method structural MRI comparison project using the same public T1-weighted image processed independently with CAT26/SPM25 and FreeSurfer.
 
-## Overview
-Compare cortical thickness/volumes between **CAT12 (SPM)** and **FreeSurfer** on a tiny **OASIS-1** subset. Include quick QC, ROI tables, and a short agreement analysis (scatter/ICC).
+## Dataset
 
-## Data & subset
-See `DATA_SOURCES.md`. Working subset: <2–5 subjects> to keep disk ≤ ~5–8 GB including derivatives.
+- Source: OpenNeuro `ds000114`
+- Participant: `sub-01`
+- Session: `ses-test`
+- Modality: T1-weighted structural MRI
+- Input: `sub-01_ses-test_T1w.nii`
 
-## Pipeline
-CAT12 surface/morphometry → FreeSurfer `recon-all` → ROI export (Desikan/Destrieux) → compare & plots → QC (CAT12 report + FS logs).
+Raw neuroimaging data are not stored in this repository.
 
-## Results (to be filled)
-- ROI scatter plots (CAT12 vs FS thickness/volume)  
-- ICC table and Bland–Altman (optional)  
-- QC notes (failed surfaces, skull-strip differences)
+## Source pipelines
+
+The comparison is based on two separately validated single-subject processing projects using the same OpenNeuro image:
+
+- CAT26/SPM25: [`structural-mri_cat12_single_subject`](https://github.com/andraderenew/structural-mri_cat12_single_subject)
+- FreeSurfer: [`structural-mri_freesurfer_single_subject`](https://github.com/andraderenew/structural-mri_freesurfer_single_subject)
+
+The CAT repository name is historical; the completed processing documented there used CAT26 `26.0.rc3` with SPM25 `25.01.02`.
+
+## Software represented by the validated source projects
+
+- MATLAB R2025b
+- SPM25 `25.01.02`
+- CAT26 `26.0.rc3` (build 3250)
+- FreeSurfer 7.4.1
+
+The CAT and FreeSurfer pipelines were run in their respective validated environments; see the source repositories for exact platform and provenance details.
+
+## Comparison scope
+
+The intended comparison is methodological and descriptive. It evaluates how two structural MRI processing frameworks summarize the same anatomy while respecting that their tissue definitions, cortical models, atlases, and derived measures are not interchangeable.
+
+Current public source outputs support:
+
+- CAT global GM, WM, CSF and TIV summaries plus CAT image-quality metrics
+- FreeSurfer global/subcortical volumes and Desikan-Killiany cortical thickness, area and volume tables
+- independently reviewed QC figures from both source pipelines
+
+A regional CAT-versus-FreeSurfer agreement analysis is not claimed unless directly comparable CAT regional outputs are available and explicitly harmonized.
 
 ## Reproducibility
-- Versions: see `env/TOOL_VERSIONS.md`  
-- Steps: “Run CAT12 → run FreeSurfer → export ROIs → compare → figures.”  
-- Limits: tiny N; scanner/site heterogeneity
 
-## Cite this work
-A `CITATION.cff` is included; GitHub shows a “Cite this repository” box. Add DOI after your first Zenodo-backed Release.
+This repository coordinates the cross-method comparison. The executable processing workflows and validated outputs remain in the two source repositories above. Software provenance is summarized in `env/TOOL_VERSIONS.md` and the common data source in `DATA_SOURCES.md`.
+
+## Interpretation
+
+This is a single-subject technical comparison. It does not provide population inference, normative interpretation, diagnostic classification, or evidence that similarly named measures from CAT26 and FreeSurfer are numerically equivalent.
+
+## Author
+
+Rene Andrade Rey  
+ORCID: `0000-0001-5627-579X`

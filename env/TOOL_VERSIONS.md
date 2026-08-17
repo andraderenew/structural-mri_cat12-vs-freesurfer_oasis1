@@ -1,22 +1,23 @@
-# Tool Versions
+# Tool Versions and Provenance
 
-## System
-OS: <your OS>  # e.g., Ubuntu LTS / macOS / Windows 11 (WSL2)
+## CAT26 / SPM25 source pipeline
 
-## MATLAB & Toolboxes
-MATLAB: R2025b
-SPM: 25.01.02
-CAT12: 12.9
-EEGLAB: 2025.1.0
-FieldTrip: 20250928
-Brainstorm: self-updating (current build; check Help → Update Brainstorm)
-BRAPH: 2.0.1
+- MATLAB: R2025b
+- SPM: 25.01.02
+- CAT: 26.0.rc3 (build 3250)
+- Platform: macOS, Apple Silicon
+- MATLAB architecture: `maca64`
 
-## MRI/FMRI
-FreeSurfer: 8.1.0
-FSL: 6.0.7.19 (FEAT/MELODIC/FDT)
+These values are taken from the completed `structural-mri_cat12_single_subject` project. Its repository name is historical; the documented processing used CAT26, not CAT12.
 
-## PET
-PETPVE12 (SPM): 1.0
+## FreeSurfer source pipeline
 
-Last verified: 2025-11-22
+- FreeSurfer: 7.4.1
+- Platform: Ubuntu 22.04.5 LTS
+- OpenMP threads used for the validated reconstruction: 8
+
+These values are taken from the completed `structural-mri_freesurfer_single_subject` project.
+
+## Comparison provenance
+
+The two source pipelines processed the same OpenNeuro `ds000114` T1-weighted image for `sub-01`, `ses-test`. They were run in different validated environments, so this comparison repository does not imply that the software packages were executed within one shared environment.

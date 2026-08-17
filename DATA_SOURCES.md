@@ -1,6 +1,23 @@
-# Data Sources & Disk Notes
+# Data Sources
 
-- Dataset: **OASIS-1 (T1 MRI)** — link: <oficial> — License: abierta (revisar términos).
-- Subset downloaded: <2–5 subjects> (IDs: <…>)
-- Disk budget: raw ~2–5 GB; derivatives (CAT12/FS) +1–3 GB.
-- Notes: usar BIDS si es posible; no subir datos crudos al repo.
+## Primary dataset
+
+- Repository: OpenNeuro
+- Dataset: `ds000114`
+- Participant: `sub-01`
+- Session: `ses-test`
+- Modality: T1-weighted structural MRI
+- Input file: `sub-01_ses-test_T1w.nii`
+
+The same public T1-weighted image was used by both validated source pipelines that this comparison coordinates.
+
+## Source processing repositories
+
+- CAT26/SPM25: `andraderenew/structural-mri_cat12_single_subject`
+- FreeSurfer: `andraderenew/structural-mri_freesurfer_single_subject`
+
+The CAT repository name is historical; the completed analysis used CAT26 with SPM25.
+
+## Data handling
+
+Raw MRI data and large derivative workspaces are excluded from this repository. Public comparison material should contain only portable scripts, documentation, summary tables, figures, and provenance needed to understand or reproduce the comparison from the source pipelines.

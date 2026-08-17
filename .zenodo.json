@@ -6,26 +6,28 @@
       "type": "ProjectMember"
     }
   ],
-  "title": "Structural MRI — CAT12 versus FreeSurfer on OASIS-1",
-  "description": "Portfolio scaffold for comparing CAT12 and FreeSurfer morphometry on a small OASIS-1 subset, including quality control, regional measurements, scatter plots, agreement statistics, and Bland–Altman analysis. The repository describes a planned comparison and does not claim completed results.",
-  "version": "0.1.1",
+  "title": "Structural MRI — CAT26 versus FreeSurfer on OpenNeuro ds000114",
+  "description": "Portfolio project coordinating a descriptive structural MRI comparison between validated CAT26/SPM25 and FreeSurfer pipelines applied to the same OpenNeuro ds000114 T1-weighted image (sub-01, ses-test). The repository does not claim population inference or a completed region-by-region agreement analysis unless directly harmonized regional outputs are available.",
+  "version": "0.2.0",
   "upload_type": "software",
   "access_right": "open",
   "license": "mit",
   "language": "eng",
   "keywords": [
     "structural MRI",
-    "CAT12",
+    "CAT26",
+    "SPM25",
     "FreeSurfer",
-    "OASIS-1",
+    "OpenNeuro",
+    "ds000114",
     "morphometry",
-    "agreement analysis",
+    "method comparison",
     "neuroimaging"
   ],
-  "notes": "Portfolio scaffold. The archived repository documents a planned comparison and does not claim completed scientific results.",
+  "notes": "Cross-method single-subject portfolio project based on two separately validated source pipelines using the same public OpenNeuro ds000114 T1-weighted image. No population-level or diagnostic inference is claimed.",
   "related_identifiers": [
     {
-      "identifier": "https://github.com/andraderenew/structural-mri_cat12-vs-freesurfer_oasis1",
+      "identifier": "https://github.com/andraderenew/structural-mri_cat26-vs-freesurfer_openneuro-ds000114",
       "relation": "isSupplementTo",
       "resource_type": "software"
     }
